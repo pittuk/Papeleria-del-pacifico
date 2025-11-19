@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Producto - Papelera del Pacífico</title>
+  <link rel="icon" type="image/png" href="assets/images/logos/papeleria del pacifico favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="assets/images/logos/logo-papelera-del-pacifico-menu.webp" alt="Papelera del Pacífico"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display:none; font-family: var(--font-family-headings); font-size: 24px; font-weight: 700; color: var(--color-primary-navy);">
+              Papelera del Pacífico
+            </div>
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Inicio</a></li>
+            <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+            <li><a href="productos.html" class="nav__link">Productos</a></li>
+            <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="header__cta">
+          <a href="contacto.html" class="btn btn-primary">Contacto</a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <ul class="mobile-menu__list">
+      <li><a href="index.html" class="mobile-menu__link">Inicio</a></li>
+      <li><a href="nosotros.html" class="mobile-menu__link">Nosotros</a></li>
+      <li><a href="productos.html" class="mobile-menu__link">Productos</a></li>
+      <li><a href="contacto.html" class="mobile-menu__link">Contacto</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <nav style="margin-bottom: var(--spacing-lg);">
+          <a href="productos.html" class="text-small" style="color: var(--color-primary-navy);">← Volver a Productos</a>
+        </nav>
+
+        <div class="product-detail">
+          <div class="product-detail__gallery">
+            <div class="product-detail__main-image">
+              <img src="assets/images/products/placeholder.jpg" alt="Producto Maxifort"
+                   onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22500%22%3E%3Crect fill=%22%230098D8%22 width=%22500%22 height=%22500%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2248%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3C/svg%3E'">
+            </div>
+          </div>
+
+          <div class="product-detail__info">
+            <span class="badge badge-hogar badge-medium mb-md">Hogar</span>
+            <h1 class="mb-md">Papel Toalla Maxifort XL Hogar</h1>
+            <p class="text-large mb-xl" style="color: var(--color-neutral-700);">
+              Papel toalla de máxima absorción y resistencia, fabricado con 100% celulosa virgen. 
+              Ideal para uso doméstico y tareas del hogar.
+            </p>
+
+            <h2 style="font-size: var(--font-size-h3); margin-bottom: var(--spacing-md);">Especificaciones Técnicas</h2>
+            <table class="specs-table">
+              <tr><th>Size</th><td>XL</td></tr>
+              <tr><th>Metros</th><td>100 metros</td></tr>
+              <tr><th>Prepicado</th><td>Sí</td></tr>
+              <tr><th>Fabricación</th><td>100% celulosa virgen</td></tr>
+              <tr><th>Tipo de empaque</th><td>Bolsón de 10 rollos</td></tr>
+              <tr><th>Pallet</th><td>300 unidades</td></tr>
+              <tr><th>Código</th><td>TP0019</td></tr>
+              <tr><th>Código de barra</th><td>7804679590038</td></tr>
+            </table>
+
+            <div style="margin-top: var(--spacing-xl);">
+              <a href="contacto.html" class="btn btn-primary btn-large">Solicitar Cotización</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__header mt-2xl">
+          <h2 class="section__title">Productos Relacionados</h2>
+        </div>
+        <div class="grid grid--3">
+          <div class="card product-card">
+            <div class="product-card__image">
+              <img src="assets/images/products/placeholder.jpg" alt="Producto relacionado"
+                   onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E53935%22 width=%22300%22 height=%22300%22/%3E%3C/svg%3E'">
+              <span class="badge badge-hogar product-card__badge">Hogar</span>
+            </div>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Papel Toalla Maxifort L</h3>
+              <ul class="product-card__specs">
+                <li>80 metros</li>
+                <li>100% celulosa virgen</li>
+              </ul>
+              <div class="product-card__action">
+                <a href="producto-detalle.html?id=tp0015" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column">
+          <div class="footer__logo">
+            <img src="assets/images/logos/Logo_3_Variante_Tipográfica_-_Papelera_del_Pacífico-removebg-preview.png" alt="Papelera del Pacífico"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display:none; font-family: var(--font-family-headings); font-size: 32px; font-weight: 700; color: white;">
+              Papelera del Pacífico
+            </div>
+          </div>
+          <p class="footer__description">Fabricantes de productos de papel de alta calidad bajo la marca Maxifort.</p>
+        </div>
+        <div class="footer__column">
+          <h3>Enlaces Rápidos</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Inicio</a></li>
+            <li><a href="nosotros.html" class="footer__link">Nosotros</a></li>
+            <li><a href="productos.html" class="footer__link">Productos</a></li>
+            <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3>Contacto</h3>
+          <div class="footer__contact-item"><span>📍</span><div>Guardia vieja 202<br>Providencia, Santiago, Chile</div></div>
+          <div class="footer__contact-item"><span>📧</span><div>contacto@papeleraayd.cl</div></div>
+          <div class="footer__contact-item"><span>📞</span><div>+56 9 XXXX XXXX</div></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">&copy; 2025 Papelera del Pacífico SPA. Todos los derechos reservados.</div>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link"><span>f</span></a>
+          <a href="#" class="footer__social-link"><span>📷</span></a>
+          <a href="#" class="footer__social-link"><span>in</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

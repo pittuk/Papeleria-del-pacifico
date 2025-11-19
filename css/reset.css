@@ -1,0 +1,123 @@
+/* ==========================================================================
+   RESET CSS - Papelera del Pacífico
+   Normalización y reseteo de estilos base
+   ========================================================================== */
+
+/* Box sizing border-box para todos los elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reseteo de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Configuración base del HTML */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Configuración del body */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Reseteo de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reseteo de imágenes y media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reseteo de formularios */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Eliminar estilos por defecto de botones */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Eliminar decoración de enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mejorar consistencia de párrafos y headings */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Mejorar legibilidad de tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Eliminar estilos por defecto de fieldset */
+fieldset {
+  border: none;
+}
+
+/* Mejorar accesibilidad con prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visible para accesibilidad de teclado */
+:focus-visible {
+  outline: 2px solid var(--color-primary-navy);
+  outline-offset: 2px;
+}
+
+/* Eliminar outline para clicks de mouse */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Mejorar selección de texto */
+::selection {
+  background-color: var(--color-primary-navy-light);
+  color: var(--color-neutral-900);
+}
