@@ -7,6 +7,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
+  initScrollDirection();
 });
 
 /**
@@ -132,6 +133,74 @@ function initScrollSpy() {
 
   // Ejecutar al cargar
   highlightNavigation();
+}
+
+/**
+ * Detectar dirección del scroll y mostrar/ocultar menú
+ */
+function initScrollDirection() {
+  const header = document.querySelector('.header');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (!header) {
+    return;
+  }
+
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  const scrollThreshold = 10; // Umbral para evitar cambios rápidos
+
+  function updateHeaderState() {
+    const currentScrollY = window.scrollY;
+    const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+
+    // Solo actualizar si el scroll cambió más del umbral
+    if (scrollDifference < scrollThreshold) {
+      ticking = false;
+      return;
+    }
+
+    // Si el scroll es mayor a 100px
+    if (currentScrollY > 100) {
+      if (currentScrollY > lastScrollY) {
+        // Scroll hacia abajo - ocultar menú, mostrar hamburguesa
+        header.classList.add('header--scrolling-down');
+
+        // Ajustar posición del menú móvil si existe
+        if (mobileMenu && window.innerWidth >= 769) {
+          mobileMenu.style.top = '80px';
+        }
+      } else {
+        // Scroll hacia arriba - mostrar menú completo
+        header.classList.remove('header--scrolling-down');
+
+        // Restaurar posición del menú móvil si existe
+        if (mobileMenu && window.innerWidth >= 769) {
+          mobileMenu.style.top = '120px';
+        }
+      }
+    } else {
+      // En la parte superior - siempre mostrar menú completo
+      header.classList.remove('header--scrolling-down');
+
+      // Restaurar posición del menú móvil si existe
+      if (mobileMenu && window.innerWidth >= 769) {
+        mobileMenu.style.top = '120px';
+      }
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeaderState);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 // Inicializar scroll spy si está disponible

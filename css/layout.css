@@ -32,22 +32,68 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/* Header al hacer scroll hacia abajo - Versión compacta */
+.header--scrolling-down {
+  margin: var(--spacing-sm) auto 0;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: var(--spacing-lg);
+}
+
+.header--scrolling-down .header__container {
+  height: 60px;
+  padding: 0 var(--spacing-md);
+}
+
+.header--scrolling-down .nav,
+.header--scrolling-down .header__cta {
+  display: none;
+}
+
+.header--scrolling-down .menu-toggle {
+  display: flex;
+}
+
+.header--scrolling-down .header__logo-full {
+  display: none;
+}
+
+.header--scrolling-down .header__logo-icon {
+  display: block;
+}
+
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 95px;
   gap: var(--spacing-lg);
-  padding: 0 var(--spacing-lg);
+  padding: 0;
+  transition: height 0.3s ease;
 }
 
 .header__logo {
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-.header__logo img {
+.header__logo a {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-full {
   height: 80px;
   width: auto;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.header__logo-icon {
+  height: 45px;
+  width: auto;
+  display: none;
+  transition: all 0.3s ease;
 }
 
 /* ========== NAVIGATION ========== */
@@ -55,6 +101,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-xl);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .nav__list {
@@ -103,13 +150,14 @@
 .header__cta {
   flex-shrink: 0;
   margin-left: auto;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .header__cta .btn {
   white-space: nowrap;
 }
 
-/* Menu Hamburguesa (Mobile) */
+/* Menu Hamburguesa (Mobile y Scroll) */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -118,6 +166,8 @@
   padding: var(--spacing-sm);
   background: none;
   border: none;
+  margin-left: auto;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .menu-toggle__bar {
@@ -591,10 +641,21 @@
   z-index: 0;
 }
 
+.cta__images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .cta__image {
   border-radius: 24px;
   overflow: hidden;
   position: relative;
+  height: 360px;
+  width: 100%;
 }
 
 .cta__image img {
@@ -710,11 +771,15 @@
 
   .header__container {
     height: 64px;
-    padding: 0 var(--spacing-md);
+    padding: 0;
   }
 
-  .header__logo img {
+  .header__logo-full {
     height: 40px;
+  }
+
+  .header__logo-icon {
+    height: 35px;
   }
 
   .nav,
@@ -725,6 +790,22 @@
   .menu-toggle,
   .mobile-menu {
     display: flex;
+  }
+
+  /* En mobile, el header compacto es un poco más pequeño */
+  .header--scrolling-down {
+    margin: var(--spacing-xs) auto 0;
+    max-width: 160px;
+    margin-right: var(--spacing-md);
+  }
+
+  .header--scrolling-down .header__container {
+    height: 50px;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .header--scrolling-down .header__logo-icon {
+    height: 32px;
   }
 
   .mobile-menu {
@@ -846,9 +927,13 @@
     padding: var(--spacing-2xl);
   }
 
+  .cta__images {
+    gap: var(--spacing-md);
+  }
+
   .cta__image {
     border-radius: 20px;
-    min-height: 300px;
+    height: 150px;
   }
 
   .cta__title {
@@ -876,12 +961,54 @@
   }
 }
 
+/* ========== DESKTOP ========== */
+@media (min-width: 769px) {
+  /* Asegurar que en desktop el menú hamburguesa solo se muestre al hacer scroll */
+  .menu-toggle {
+    display: none;
+  }
+
+  .header--scrolling-down .menu-toggle {
+    display: flex;
+  }
+
+  /* El menú móvil debe aparecer desde arriba en desktop cuando se activa */
+  .mobile-menu {
+    display: block;
+    top: 120px;
+  }
+
+  .header--scrolling-down + .mobile-menu,
+  .header--scrolling-down ~ .mobile-menu {
+    top: 80px;
+  }
+
+  .mobile-menu--active {
+    display: block;
+  }
+}
+
 @media (min-width: 769px) and (max-width: 1439px) {
   /* Tablet */
   /* Header Tablet */
   .header {
     border-radius: 28px;
     margin: var(--spacing-md) var(--spacing-md) 0;
+  }
+
+  .header--scrolling-down {
+    margin: var(--spacing-sm) auto 0;
+    max-width: 180px;
+    margin-right: var(--spacing-md);
+  }
+
+  .header--scrolling-down .header__container {
+    height: 55px;
+    padding: 0 var(--spacing-md);
+  }
+
+  .header--scrolling-down .header__logo-icon {
+    height: 40px;
   }
 
   .grid--3,
@@ -946,9 +1073,13 @@
     padding: var(--spacing-3xl);
   }
 
+  .cta__images {
+    gap: var(--spacing-md);
+  }
+
   .cta__image {
     border-radius: 20px;
-    min-height: 400px;
+    height: 160px;
   }
 
   .cta__title {
