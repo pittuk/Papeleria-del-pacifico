@@ -379,6 +379,14 @@
   .product-detail {
     grid-template-columns: 45% 55%;
   }
+
+  .hero-modern {
+    margin: 0 var(--spacing-md);
+  }
+
+  .testimonials-section {
+    margin: 0 var(--spacing-md);
+  }
 }
 
 /* ==========================================================================
@@ -387,12 +395,13 @@
 
 .hero-modern {
   padding: var(--spacing-2xl) 0;
-  
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
   min-height: 80vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   position: relative;
+  margin: 0 var(--spacing-lg);
 }
 
 .hero-modern__wrapper {
@@ -597,6 +606,7 @@
   .hero-modern {
     padding: var(--spacing-4xl) 0;
     min-height: auto;
+    margin: 0 var(--spacing-md);
   }
 
   .hero-modern__wrapper {
@@ -651,6 +661,7 @@
 @media (max-width: 768px) {
   .hero-modern {
     padding: var(--spacing-3xl) 0;
+    margin: 0 var(--spacing-md);
   }
 
   .hero-modern__title {
@@ -708,7 +719,7 @@
    ========================================================================== */
 
 .commitment-section {
-  padding: var(--spacing-4xl) var(--spacing-lg);
+  padding: var(--spacing-4xl) 0;
   background-image: url('../assets/images/imagenes/tiro-de-angulo-bajo-de-arboles-en-el-bosque copia.webp');
   background-size: cover;
   background-position: center;
@@ -799,22 +810,77 @@
   background-color: var(--color-white);
   color: var(--color-primary-navy);
   border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.btn-white::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--color-secondary-cyan);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
 }
 
 .btn-white:hover {
-  background-color: var(--color-secondary-cyan);
-  color: var(--color-white);
-  transform: translateY(-2px);
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+.btn-white:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.btn-white:active {
+  color: #ffffff;
 }
 
 .btn-outline-white {
   background-color: transparent;
-  color: var(--color-white);
+  color: #ffffff;
   border: 1px solid var(--color-white);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.btn-outline-white::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--color-white);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
 }
 
 .btn-outline-white:hover {
-  background-color: var(--color-white);
+  color: var(--color-primary-navy);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline-white:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.btn-outline-white:active {
   color: var(--color-primary-navy);
 }
 
@@ -875,7 +941,7 @@
 /* Responsive para Mobile */
 @media (max-width: 768px) {
   .commitment-section {
-    padding: var(--spacing-3xl) var(--spacing-md);
+    padding: var(--spacing-3xl) 0;
     border-radius: 24px;
     margin: var(--spacing-xl) var(--spacing-md);
   }
@@ -922,6 +988,7 @@
   background: linear-gradient(to top, #fbfbfb 0%, #ffffff 100%);
   position: relative;
   overflow: visible;
+  margin: 0 var(--spacing-lg);
 }
 
 .testimonials-section .container {
@@ -1141,6 +1208,7 @@
 @media (max-width: 768px) {
   .testimonials-section {
     padding: var(--spacing-3xl) 0;
+    margin: 0 var(--spacing-md);
   }
 
   .testimonials-section .container {
@@ -1377,21 +1445,50 @@
   width: 100%;
   padding: 16px 24px;
   background-color: #1a1a1a;
-  color: var(--color-white);
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
   border-radius: var(--radius-md);
   font-family: var(--font-family-headings);
   font-size: 14px;
   font-weight: var(--font-weight-medium);
-  transition: all var(--transition-base);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.product-card-modern__button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--color-primary-navy);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
 }
 
 .product-card-modern__button:hover {
-  background-color: var(--color-primary-navy);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(18, 58, 86, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.product-card-modern__button:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.product-card-modern__button:active {
+  color: #ffffff;
+  transform: translateY(0) scale(0.98);
+  transition: all 0.1s ease;
 }
 
 /* Responsive */
