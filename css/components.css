@@ -11,12 +11,12 @@
   gap: var(--spacing-sm);
   padding: 12px 24px;
   font-family: var(--font-family-headings);
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-semibold);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
   line-height: 1;
   text-align: center;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: all var(--transition-base);
@@ -79,12 +79,12 @@
 /* Tamaños de botón */
 .btn-small {
   padding: 8px 16px;
-  font-size: var(--font-size-body-small);
+  font-size: 13px;
 }
 
 .btn-large {
   padding: 16px 32px;
-  font-size: var(--font-size-body-large);
+  font-size: 15px;
 }
 
 /* ========== BADGES / ETIQUETAS ========== */
@@ -381,11 +381,11 @@
 
   .btn {
     padding: 10px 20px;
-    font-size: var(--font-size-body-small);
+    font-size: 13px;
   }
 
   .btn-large {
     padding: 14px 28px;
-    font-size: var(--font-size-body);
+    font-size: 14px;
   }
 }

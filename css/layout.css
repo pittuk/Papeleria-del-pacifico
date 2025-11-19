@@ -593,8 +593,8 @@
   background-color: var(--color-white);
   color: #1a1a1a;
   font-family: var(--font-family-headings);
-  font-size: 14px;
-  font-weight: var(--font-weight-semibold);
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
   padding: 10px 24px;
   border-radius: var(--radius-md);
   text-decoration: none;
@@ -643,8 +643,8 @@
   background-color: var(--color-white);
   color: #1a1a1a;
   font-family: var(--font-family-headings);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
   padding: 16px 32px;
   border-radius: var(--radius-md);
   text-decoration: none;
@@ -838,7 +838,7 @@
 
   .cta__main-btn {
     padding: 14px 28px;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .cta__gallery {
