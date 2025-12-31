@@ -13,7 +13,7 @@ const products = {
     line: 'Económica',
     badgeClass: 'badge-economica',
     description: 'Papel higiénico económico de alta calidad, fabricado con 100% celulosa virgen. Ideal para uso institucional y comercial.',
-    image: 'assets/images/products/economica/higienico-economico-x6.jpg',
+    image: 'assets/images/products/economica/Higienico-Economico-x-6-rollos-celulosa-para-dispensadores.webp',
     specs: {
       'Presentación': 'Pack x6 rollos',
       'Material': '100% celulosa virgen',
@@ -85,7 +85,7 @@ const products = {
     line: 'Maxifort',
     badgeClass: 'badge-maxifort',
     description: 'Papel higiénico Maxifort de 500 metros en pack de 6, fabricado con 100% celulosa virgen. Máximo rendimiento.',
-    image: 'assets/images/products/maxifort/higienico-500-x6.jpg',
+    image: 'assets/images/products/maxifort/Higienico-500x6-premium-celulosa-dispensadores.webp',
     specs: {
       'Presentación': 'Pack x6 rollos',
       'Metraje': '500 metros por rollo',
@@ -210,10 +210,10 @@ const products = {
     category: 'toalla'
   },
 
-  // SABANILLA MÉDICA
+  // LÍNEA MÉDICA
   'sabanilla-medica': {
     name: 'Sabanilla Médica',
-    line: 'Premium',
+    line: 'Línea Médica',
     badgeClass: 'badge-premium',
     description: 'Sabanilla médica de alta calidad, fabricada con 100% celulosa virgen. Prepicada para uso profesional en el sector salud.',
     image: 'assets/images/products/sabanilla/sabanilla-medica.jpg',
