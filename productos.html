@@ -79,12 +79,12 @@
             <div class="filter-group">
               <h4 class="filter-group__title">Categoría</h4>
               <div class="filter-option">
-                <input type="checkbox" id="cat-toalla" name="category" value="papel-toalla">
-                <label for="cat-toalla">Papel Toalla</label>
-              </div>
-              <div class="filter-option">
                 <input type="checkbox" id="cat-higienico" name="category" value="papel-higienico">
                 <label for="cat-higienico">Papel Higiénico</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="cat-toalla" name="category" value="toalla">
+                <label for="cat-toalla">Toalla</label>
               </div>
               <div class="filter-option">
                 <input type="checkbox" id="cat-sabanilla" name="category" value="sabanilla-medica">
@@ -93,22 +93,30 @@
             </div>
 
             <div class="filter-group">
-              <h4 class="filter-group__title">Tipo</h4>
+              <h4 class="filter-group__title">Línea de Producto</h4>
               <div class="filter-option">
-                <input type="checkbox" id="type-hogar" name="type" value="hogar">
-                <label for="type-hogar">Hogar</label>
+                <input type="checkbox" id="type-economica" name="type" value="economica">
+                <label for="type-economica">Económica</label>
               </div>
               <div class="filter-option">
-                <input type="checkbox" id="type-institucional" name="type" value="institucional">
-                <label for="type-institucional">Institucional</label>
+                <input type="checkbox" id="type-maxifort" name="type" value="maxifort">
+                <label for="type-maxifort">Maxifort</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="type-plus" name="type" value="plus">
+                <label for="type-plus">Plus</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="type-hogar-dh" name="type" value="hogar-dh">
+                <label for="type-hogar-dh">Hogar Doble Hoja</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="type-hogar-sh" name="type" value="hogar-sh">
+                <label for="type-hogar-sh">Hogar Una Hoja</label>
               </div>
               <div class="filter-option">
                 <input type="checkbox" id="type-premium" name="type" value="premium">
                 <label for="type-premium">Premium</label>
-              </div>
-              <div class="filter-option">
-                <input type="checkbox" id="type-medica" name="type" value="medica">
-                <label for="type-medica">Médica</label>
               </div>
             </div>
 
@@ -120,212 +128,322 @@
           <!-- Grid de Productos -->
           <div class="products-grid grid grid--3" style="align-items: stretch;">
 
-            <!-- Producto 1: Papel Toalla L Hogar -->
-            <div class="card product-card" data-category="papel-toalla" data-type="hogar" data-name="Papel Toalla Maxifort L Hogar">
-              <div class="product-card__image">
-                <img src="assets/images/products/papel-toalla-l-hogar.jpg" alt="Papel Toalla Maxifort L Hogar"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E53935%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22%3EL - 80m%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-hogar product-card__badge">Hogar</span>
-              </div>
-              <div class="product-card__content">
-                <h3 class="product-card__title">Papel Toalla Maxifort L</h3>
-                <ul class="product-card__specs">
-                  <li>Size: L (80 metros)</li>
-                  <li>100% celulosa virgen</li>
-                  <li>Bolsón de 10 rollos</li>
-                  <li>Código: TP0015</li>
-                </ul>
-                <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0015" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
-                </div>
-              </div>
-            </div>
+            <!-- ======================= -->
+            <!-- LÍNEA ECONÓMICA -->
+            <!-- ======================= -->
 
-            <!-- Producto 2: Papel Toalla XL Hogar -->
-            <div class="card product-card" data-category="papel-toalla" data-type="hogar" data-name="Papel Toalla Maxifort XL Hogar">
+            <!-- Higiénico Económico x 6 -->
+            <div class="card product-card" data-category="papel-higienico" data-type="economica" data-name="Higiénico Económico x 6">
               <div class="product-card__image">
-                <img src="assets/images/products/papel-toalla-xl-hogar.jpg" alt="Papel Toalla Maxifort XL Hogar"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%230098D8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22%3EXL - 100m%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-hogar product-card__badge">Hogar</span>
+                <img src="assets/images/products/economica/higienico-economico-x6.jpg" alt="Higiénico Económico x 6"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%234CAF50%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EEconómica%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EHigiénico x6%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-economica product-card__badge">Económica</span>
               </div>
               <div class="product-card__content">
-                <h3 class="product-card__title">Papel Toalla Maxifort XL</h3>
+                <h3 class="product-card__title">Higiénico Económico x 6</h3>
                 <ul class="product-card__specs">
-                  <li>Size: XL (100 metros)</li>
+                  <li>Pack x6 rollos</li>
                   <li>100% celulosa virgen</li>
-                  <li>Bolsón de 10 rollos</li>
-                  <li>Código: TP0019</li>
-                </ul>
-                <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0019" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Producto 3: Papel Toalla XXL Hogar -->
-            <div class="card product-card" data-category="papel-toalla" data-type="hogar" data-name="Papel Toalla Maxifort XXL Hogar">
-              <div class="product-card__image">
-                <img src="assets/images/products/papel-toalla-xxl-hogar.jpg" alt="Papel Toalla Maxifort XXL Hogar"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E53935%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2224%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22%3EXXL - 150m%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-hogar product-card__badge">Hogar</span>
-              </div>
-              <div class="product-card__content">
-                <h3 class="product-card__title">Papel Toalla Maxifort XXL</h3>
-                <ul class="product-card__specs">
-                  <li>Size: XXL (150 metros)</li>
-                  <li>100% celulosa virgen</li>
-                  <li>Bolsón de 10 rollos</li>
-                  <li>Código: TP0021</li>
-                </ul>
-                <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0021" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Producto 4: Papel Toalla XXL Institucional -->
-            <div class="card product-card" data-category="papel-toalla" data-type="institucional" data-name="Papel Toalla Maxifort XXL Institucional">
-              <div class="product-card__image">
-                <img src="assets/images/products/papel-toalla-xxl-institucional.jpg" alt="Papel Toalla Maxifort XXL Institucional"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%230098D8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2222%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2265%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22%3EXXL Institucional%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-institucional product-card__badge">Institucional</span>
-              </div>
-              <div class="product-card__content">
-                <h3 class="product-card__title">Papel Toalla XXL Institucional</h3>
-                <ul class="product-card__specs">
-                  <li>Pack x2 (190 metros)</li>
                   <li>Para dispensadores</li>
-                  <li>100% celulosa virgen</li>
-                  <li>Código: TP0011</li>
                 </ul>
                 <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0011" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                  <a href="producto-detalle.html?id=eco-hig-x6" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
                 </div>
               </div>
             </div>
 
-            <!-- Producto 5: Papel Toalla XXXL Institucional -->
-            <div class="card product-card" data-category="papel-toalla" data-type="institucional" data-name="Papel Toalla Maxifort XXXL Institucional">
+            <!-- Toalla Económica 190 x 2 -->
+            <div class="card product-card" data-category="toalla" data-type="economica" data-name="Toalla Económica 190 x 2">
               <div class="product-card__image">
-                <img src="assets/images/products/papel-toalla-xxxl-institucional.jpg" alt="Papel Toalla Maxifort XXXL Institucional"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%234CAF50%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2222%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2265%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22%3EXXXL Institucional%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-institucional product-card__badge">Institucional</span>
+                <img src="assets/images/products/economica/Toalla-Economica-tipo-190x2-rollos-para-dispensadores.webp" alt="Toalla Económica 190 x 2"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%234CAF50%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EEconómica%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EToalla 190m x2%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-economica product-card__badge">Económica</span>
               </div>
               <div class="product-card__content">
-                <h3 class="product-card__title">Papel Toalla XXXL Institucional</h3>
+                <h3 class="product-card__title">Toalla Económica 190 x 2</h3>
                 <ul class="product-card__specs">
-                  <li>Pack x2 (250 metros)</li>
-                  <li>Para dispensadores</li>
+                  <li>Pack x2 rollos (190 metros)</li>
                   <li>100% celulosa virgen</li>
-                  <li>Código: TP0023</li>
+                  <li>Para dispensadores</li>
                 </ul>
                 <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0023" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                  <a href="producto-detalle.html?id=eco-toa-190" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
                 </div>
               </div>
             </div>
 
-            <!-- Producto 6: Papel Toalla PREMIUM XL -->
-            <div class="card product-card" data-category="papel-toalla" data-type="premium" data-name="Papel Toalla PREMIUM XL Maxifort">
+            <!-- Toalla Económica 250 x 2 -->
+            <div class="card product-card" data-category="toalla" data-type="economica" data-name="Toalla Económica 250 x 2">
               <div class="product-card__image">
-                <img src="assets/images/products/papel-toalla-premium-xl.jpg" alt="Papel Toalla PREMIUM XL Maxifort"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23000000%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2222%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2265%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2220%22 font-family=%22Arial%22%3EPREMIUM XL%3C/text%3E%3C/svg%3E'">
+                <img src="assets/images/products/economica/Toalla-Economica-tipo-250x2-rollos-para-dispensadores.webp" alt="Toalla Económica 250 x 2"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%234CAF50%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EEconómica%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EToalla 250m x2%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-economica product-card__badge">Económica</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Toalla Económica 250 x 2</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x2 rollos (250 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=eco-toa-250" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ======================= -->
+            <!-- LÍNEA MAXIFORT -->
+            <!-- ======================= -->
+
+            <!-- Higiénico Maxifort 300 x 6 -->
+            <div class="card product-card" data-category="papel-higienico" data-type="maxifort" data-name="Higiénico Maxifort 300 x 6">
+              <div class="product-card__image">
+                <img src="assets/images/products/maxifort/Higienico-300x6-premium-celulosa-dispensadores.webp" alt="Higiénico Maxifort 300 x 6"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E53935%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EHigiénico 300m x6%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-maxifort product-card__badge">Maxifort</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Higiénico Maxifort 300 x 6</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x6 rollos (300 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=max-hig-300-x6" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Higiénico Maxifort 500 x 4 -->
+            <div class="card product-card" data-category="papel-higienico" data-type="maxifort" data-name="Higiénico Maxifort 500 x 4">
+              <div class="product-card__image">
+                <img src="assets/images/products/maxifort/Higienico-500x4-premium-celulosa-dispensadores.webp" alt="Higiénico Maxifort 500 x 4"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E53935%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EHigiénico 500m x4%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-maxifort product-card__badge">Maxifort</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Higiénico Maxifort 500 x 4</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x4 rollos (500 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=max-hig-500-x4" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Higiénico Maxifort 500 x 6 -->
+            <div class="card product-card" data-category="papel-higienico" data-type="maxifort" data-name="Higiénico Maxifort 500 x 6">
+              <div class="product-card__image">
+                <img src="assets/images/products/maxifort/higienico-500-x6.jpg" alt="Higiénico Maxifort 500 x 6"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E53935%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EHigiénico 500m x6%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-maxifort product-card__badge">Maxifort</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Higiénico Maxifort 500 x 6</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x6 rollos (500 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=max-hig-500-x6" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toalla Maxifort 190 x 2 -->
+            <div class="card product-card" data-category="toalla" data-type="maxifort" data-name="Toalla Maxifort 190 x 2">
+              <div class="product-card__image">
+                <img src="assets/images/products/maxifort/Toalla-190x2-Maxifort-Celulosa-dispensadores.webp" alt="Toalla Maxifort 190 x 2"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E53935%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EToalla 190m x2%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-maxifort product-card__badge">Maxifort</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Toalla Maxifort 190 x 2</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x2 rollos (190 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=max-toa-190" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toalla Maxifort 250 x 2 -->
+            <div class="card product-card" data-category="toalla" data-type="maxifort" data-name="Toalla Maxifort 250 x 2">
+              <div class="product-card__image">
+                <img src="assets/images/products/maxifort/Toalla-250x2-Maxifort-celulosa-dispensadores.webp" alt="Toalla Maxifort 250 x 2"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E53935%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EToalla 250m x2%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-maxifort product-card__badge">Maxifort</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Toalla Maxifort 250 x 2</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x2 rollos (250 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=max-toa-250" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ======================= -->
+            <!-- LÍNEA HOGAR DOBLE HOJA -->
+            <!-- ======================= -->
+
+            <!-- Toalla Hogar Doble Hoja 80m -->
+            <div class="card product-card" data-category="toalla" data-type="hogar-dh" data-name="Toalla Hogar Doble Hoja 80m">
+              <div class="product-card__image">
+                <img src="assets/images/products/hogar doble hoja/toalla-Maxifort-doble-hoja-diseño-tinta-laminada-80-mts.webp" alt="Toalla Hogar Doble Hoja 80m"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E65100%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2235%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22 font-weight=%22bold%22%3EHogar%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2214%22 font-family=%22Arial%22%3EDoble Hoja%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3E80 metros%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-hogar-dh product-card__badge">Hogar Doble Hoja</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Toalla Hogar Doble Hoja 80m</h3>
+                <ul class="product-card__specs">
+                  <li>80 metros</li>
+                  <li>Doble hoja con diseño</li>
+                  <li>Tinta laminada</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=hogar-dh-80" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toalla Hogar Doble Hoja 100m -->
+            <div class="card product-card" data-category="toalla" data-type="hogar-dh" data-name="Toalla Hogar Doble Hoja 100m">
+              <div class="product-card__image">
+                <img src="assets/images/products/hogar doble hoja/toalla Maxifort doble hoja diseño tinta laminada 100 mts.jpeg" alt="Toalla Hogar Doble Hoja 100m"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E65100%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2235%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22 font-weight=%22bold%22%3EHogar%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2214%22 font-family=%22Arial%22%3EDoble Hoja%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3E100 metros%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-hogar-dh product-card__badge">Hogar Doble Hoja</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Toalla Hogar Doble Hoja 100m</h3>
+                <ul class="product-card__specs">
+                  <li>100 metros</li>
+                  <li>Doble hoja con diseño</li>
+                  <li>Tinta laminada</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=hogar-dh-100" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toalla Hogar Colosal Doble Hoja 150m -->
+            <div class="card product-card" data-category="toalla" data-type="hogar-dh" data-name="Toalla Hogar Colosal Doble Hoja 150m">
+              <div class="product-card__image">
+                <img src="assets/images/products/hogar doble hoja/toalla-Maxifort-Colosal-doble-hoja-diseno-tinta-laminada-150mts.webp" alt="Toalla Hogar Colosal Doble Hoja 150m"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23E65100%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2235%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22 font-weight=%22bold%22%3EHogar%3C/text%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2214%22 font-family=%22Arial%22%3EColosal Doble Hoja%3C/text%3E%3Ctext x=%2250%25%22 y=%2270%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3E150 metros%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-hogar-dh product-card__badge">Hogar Doble Hoja</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Toalla Hogar Colosal 150m</h3>
+                <ul class="product-card__specs">
+                  <li>150 metros</li>
+                  <li>Doble hoja con diseño</li>
+                  <li>Tinta laminada</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=hogar-dh-150" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ======================= -->
+            <!-- LÍNEA PLUS -->
+            <!-- ======================= -->
+
+            <!-- Higiénico Plus 300 x 6 -->
+            <div class="card product-card" data-category="papel-higienico" data-type="plus" data-name="Higiénico Plus 300 x 6">
+              <div class="product-card__image">
+                <img src="assets/images/products/plus/Higienico-300mtsx6-plus-celulosa-dispensadores.webp" alt="Higiénico Plus 300 x 6"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%230098D8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EPlus%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EHigiénico 300m x6%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-plus product-card__badge">Plus</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Higiénico Plus 300 x 6</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x6 rollos (300 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=plus-hig-300" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toalla Plus 190 x 2 -->
+            <div class="card product-card" data-category="toalla" data-type="plus" data-name="Toalla Plus 190 x 2">
+              <div class="product-card__image">
+                <img src="assets/images/products/plus/Toalla-190mtsx2-plus-celulosa-dispensadores.webp" alt="Toalla Plus 190 x 2"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%230098D8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EPlus%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EToalla 190m x2%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-plus product-card__badge">Plus</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Toalla Plus 190 x 2</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x2 rollos (190 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=plus-toa-190" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toalla Plus 250 x 2 -->
+            <div class="card product-card" data-category="toalla" data-type="plus" data-name="Toalla Plus 250 x 2">
+              <div class="product-card__image">
+                <img src="assets/images/products/plus/Toalla-250mtsx2-plus-celulosa-dispensadores.webp" alt="Toalla Plus 250 x 2"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%230098D8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EPlus%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2216%22 font-family=%22Arial%22%3EToalla 250m x2%3C/text%3E%3C/svg%3E'">
+                <span class="badge badge-plus product-card__badge">Plus</span>
+              </div>
+              <div class="product-card__content">
+                <h3 class="product-card__title">Toalla Plus 250 x 2</h3>
+                <ul class="product-card__specs">
+                  <li>Pack x2 rollos (250 metros)</li>
+                  <li>100% celulosa virgen</li>
+                  <li>Para dispensadores</li>
+                </ul>
+                <div class="product-card__action">
+                  <a href="producto-detalle.html?id=plus-toa-250" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ======================= -->
+            <!-- SABANILLA MÉDICA -->
+            <!-- ======================= -->
+
+            <!-- Sabanilla Médica -->
+            <div class="card product-card" data-category="sabanilla-medica" data-type="premium" data-name="Sabanilla Médica">
+              <div class="product-card__image">
+                <img src="assets/images/products/sabanilla/sabanilla-medica.jpg" alt="Sabanilla Médica"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23000000%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3ESabanilla%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2216%22 font-family=%22Arial%22%3EMédica%3C/text%3E%3C/svg%3E'">
                 <span class="badge badge-premium product-card__badge">Premium</span>
               </div>
               <div class="product-card__content">
-                <h3 class="product-card__title">Papel Toalla PREMIUM XL</h3>
+                <h3 class="product-card__title">Sabanilla Médica</h3>
                 <ul class="product-card__specs">
-                  <li>Size: XL (100 metros)</li>
-                  <li>Calidad superior</li>
-                  <li>100% celulosa virgen</li>
-                  <li>Código: TP0015</li>
-                </ul>
-                <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0015-premium" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Producto 7: Papel Higiénico Premium XL -->
-            <div class="card product-card" data-category="papel-higienico" data-type="premium" data-name="Papel Higiénico Premium Ultra Suavidad XL">
-              <div class="product-card__image">
-                <img src="assets/images/products/papel-higienico-premium-xl.jpg" alt="Papel Higiénico Premium XL"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23000000%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2216%22 font-family=%22Arial%22%3EPremium%3C/text%3E%3Ctext x=%2250%25%22 y=%2275%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2216%22 font-family=%22Arial%22%3EUltra Suavidad%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-premium product-card__badge">Premium</span>
-              </div>
-              <div class="product-card__content">
-                <h3 class="product-card__title">Papel Higiénico Premium XL</h3>
-                <ul class="product-card__specs">
-                  <li>Pack x6 (250 metros)</li>
-                  <li>Una Hoja - Ultra Suavidad</li>
-                  <li>Para dispensadores</li>
-                  <li>Código: TP0013</li>
-                </ul>
-                <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0013" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Producto 8: Papel Higiénico Premium XXL (Pack x6) -->
-            <div class="card product-card" data-category="papel-higienico" data-type="premium" data-name="Papel Higiénico Premium Ultra Suavidad XXL">
-              <div class="product-card__image">
-                <img src="assets/images/products/papel-higienico-premium-xxl-6.jpg" alt="Papel Higiénico Premium XXL Pack x6"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23000000%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2216%22 font-family=%22Arial%22%3EPremium XXL%3C/text%3E%3Ctext x=%2250%25%22 y=%2275%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2214%22 font-family=%22Arial%22%3EPack x6%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-premium product-card__badge">Premium</span>
-              </div>
-              <div class="product-card__content">
-                <h3 class="product-card__title">Papel Higiénico Premium XXL (x6)</h3>
-                <ul class="product-card__specs">
-                  <li>Pack x6 (500 metros)</li>
-                  <li>Ultra Suavidad</li>
-                  <li>Para dispensadores</li>
-                  <li>Código: TP0015</li>
-                </ul>
-                <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0015" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Producto 9: Papel Higiénico Premium XXL (Pack x4) -->
-            <div class="card product-card" data-category="papel-higienico" data-type="premium" data-name="Papel Higiénico Premium Ultra Suavidad XXL Pack 4">
-              <div class="product-card__image">
-                <img src="assets/images/products/papel-higienico-premium-xxl-4.jpg" alt="Papel Higiénico Premium XXL Pack x4"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23000000%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2240%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2220%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2216%22 font-family=%22Arial%22%3EPremium XXL%3C/text%3E%3Ctext x=%2250%25%22 y=%2275%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23FFD54F%22 font-size=%2214%22 font-family=%22Arial%22%3EPack x4%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-premium product-card__badge">Premium</span>
-              </div>
-              <div class="product-card__content">
-                <h3 class="product-card__title">Papel Higiénico Premium XXL (x4)</h3>
-                <ul class="product-card__specs">
-                  <li>Pack x4 (500 metros)</li>
-                  <li>Una Hoja - Ultra Suavidad</li>
-                  <li>Para dispensadores</li>
-                  <li>Código: TP0014</li>
-                </ul>
-                <div class="product-card__action">
-                  <a href="producto-detalle.html?id=tp0014" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Producto 10: Sabanilla Médica -->
-            <div class="card product-card" data-category="sabanilla-medica" data-type="medica" data-name="Sabanilla Médica Maxifort">
-              <div class="product-card__image">
-                <img src="assets/images/products/sabanilla-medica.jpg" alt="Sabanilla Médica Maxifort"
-                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%230098D8%22 width=%22300%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2222%22 font-family=%22Arial%22 font-weight=%22bold%22%3EMaxifort%3C/text%3E%3Ctext x=%2250%25%22 y=%2265%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2218%22 font-family=%22Arial%22%3ESabanilla Médica%3C/text%3E%3C/svg%3E'">
-                <span class="badge badge-medica product-card__badge">Médica</span>
-              </div>
-              <div class="product-card__content">
-                <h3 class="product-card__title">Sabanilla Médica Maxifort</h3>
-                <ul class="product-card__specs">
-                  <li>Pack x2 (50 metros)</li>
                   <li>100% celulosa virgen</li>
                   <li>Prepicado</li>
-                  <li>Código: SN0001</li>
+                  <li>Uso profesional médico</li>
                 </ul>
                 <div class="product-card__action">
-                  <a href="producto-detalle.html?id=sn0001" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
+                  <a href="producto-detalle.html?id=sabanilla-medica" class="btn btn-primary" style="width: 100%;">Ver detalles</a>
                 </div>
               </div>
             </div>

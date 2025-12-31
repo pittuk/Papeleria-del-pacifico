@@ -186,6 +186,31 @@
   color: var(--color-maxifort-blue-dark);
 }
 
+.badge-economica {
+  background-color: var(--color-maxifort-green-light);
+  color: var(--color-maxifort-green-dark);
+}
+
+.badge-maxifort {
+  background-color: var(--color-maxifort-red-light);
+  color: var(--color-maxifort-red-dark);
+}
+
+.badge-plus {
+  background-color: var(--color-maxifort-blue-light);
+  color: var(--color-maxifort-blue-dark);
+}
+
+.badge-hogar-dh {
+  background-color: #FFF3E0;
+  color: #E65100;
+}
+
+.badge-hogar-sh {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+}
+
 .badge-medium {
   padding: 6px 16px;
   font-size: var(--font-size-body-small);

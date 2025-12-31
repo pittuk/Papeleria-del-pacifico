@@ -36,6 +36,11 @@
   --color-maxifort-green-light: #9CCC65;
   --color-maxifort-green-dark: #558B2F;
 
+  /* Línea Maxifort Rojo */
+  --color-maxifort-red: #E53935;
+  --color-maxifort-red-light: #FFCDD2;
+  --color-maxifort-red-dark: #C62828;
+
   /* Línea Premium Verde Oscuro */
   --color-premium-green: #006B3F;
   --color-premium-green-light: #00875A;
