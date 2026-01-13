@@ -146,58 +146,68 @@ function initScrollDirection() {
     return;
   }
 
+  let isCompact = false; // Estado actual del header
   let lastScrollY = window.scrollY;
-  let ticking = false;
-  const scrollThreshold = 10; // Umbral para evitar cambios rápidos
+  let accumulatedScroll = 0; // Scroll acumulado en una dirección
 
-  function updateHeaderState() {
-    const currentScrollY = window.scrollY;
-    const scrollDifference = Math.abs(currentScrollY - lastScrollY);
+  const SCROLL_DOWN_THRESHOLD = 80; // Cuánto scroll hacia abajo para compactar
+  const SCROLL_UP_THRESHOLD = 50; // Cuánto scroll hacia arriba para expandir
+  const TOP_THRESHOLD = 100; // Zona superior donde siempre está expandido
 
-    // Solo actualizar si el scroll cambió más del umbral
-    if (scrollDifference < scrollThreshold) {
-      ticking = false;
-      return;
-    }
+  function setCompactMode(compact) {
+    if (compact === isCompact) return; // No hacer nada si ya está en ese estado
 
-    // Si el scroll es mayor a 100px
-    if (currentScrollY > 100) {
-      if (currentScrollY > lastScrollY) {
-        // Scroll hacia abajo - ocultar menú, mostrar hamburguesa
-        header.classList.add('header--scrolling-down');
+    isCompact = compact;
 
-        // Ajustar posición del menú móvil si existe
-        if (mobileMenu && window.innerWidth >= 769) {
-          mobileMenu.style.top = '80px';
-        }
-      } else {
-        // Scroll hacia arriba - mostrar menú completo
-        header.classList.remove('header--scrolling-down');
-
-        // Restaurar posición del menú móvil si existe
-        if (mobileMenu && window.innerWidth >= 769) {
-          mobileMenu.style.top = '120px';
-        }
+    if (compact) {
+      header.classList.add('header--scrolling-down');
+      if (mobileMenu && window.innerWidth >= 769) {
+        mobileMenu.style.top = '80px';
       }
     } else {
-      // En la parte superior - siempre mostrar menú completo
       header.classList.remove('header--scrolling-down');
-
-      // Restaurar posición del menú móvil si existe
       if (mobileMenu && window.innerWidth >= 769) {
         mobileMenu.style.top = '120px';
       }
     }
-
-    lastScrollY = currentScrollY;
-    ticking = false;
   }
 
   function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(updateHeaderState);
-      ticking = true;
+    const currentScrollY = window.scrollY;
+    const scrollDelta = currentScrollY - lastScrollY;
+
+    // Si estamos en la zona superior, siempre expandido
+    if (currentScrollY <= TOP_THRESHOLD) {
+      accumulatedScroll = 0;
+      setCompactMode(false);
+      lastScrollY = currentScrollY;
+      return;
     }
+
+    // Acumular scroll en la dirección actual
+    if (scrollDelta > 0) {
+      // Scrolleando hacia abajo
+      if (accumulatedScroll < 0) {
+        accumulatedScroll = 0; // Reset si cambió de dirección
+      }
+      accumulatedScroll += scrollDelta;
+
+      if (accumulatedScroll >= SCROLL_DOWN_THRESHOLD) {
+        setCompactMode(true);
+      }
+    } else if (scrollDelta < 0) {
+      // Scrolleando hacia arriba
+      if (accumulatedScroll > 0) {
+        accumulatedScroll = 0; // Reset si cambió de dirección
+      }
+      accumulatedScroll += scrollDelta; // scrollDelta es negativo
+
+      if (accumulatedScroll <= -SCROLL_UP_THRESHOLD) {
+        setCompactMode(false);
+      }
+    }
+
+    lastScrollY = currentScrollY;
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });

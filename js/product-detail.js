@@ -216,7 +216,7 @@ const products = {
     line: 'Línea Médica',
     badgeClass: 'badge-premium',
     description: 'Sabanilla médica de alta calidad, fabricada con 100% celulosa virgen. Prepicada para uso profesional en el sector salud.',
-    image: 'assets/images/products/sabanilla/sabanilla-medica.jpg',
+    image: 'assets/images/products/sabanilla/sabanillas-medicas-papelera-del-pacifico.webp',
     specs: {
       'Material': '100% celulosa virgen',
       'Tipo': 'Prepicado',
@@ -412,19 +412,38 @@ function initImageZoom() {
   const img = imageContainer.querySelector('img');
   if (!img) return;
 
-  // Crear el elemento de la lupa
-  const zoomLens = document.createElement('div');
-  zoomLens.className = 'zoom-lens';
-  imageContainer.appendChild(zoomLens);
+  // Evitar duplicar elementos si ya existen
+  let zoomLens = imageContainer.querySelector('.zoom-lens');
+  let zoomHint = imageContainer.querySelector('.zoom-hint');
 
-  // Crear hint de zoom con icono de lupa
-  const zoomHint = document.createElement('div');
-  zoomHint.className = 'zoom-hint';
-  zoomHint.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
-  imageContainer.appendChild(zoomHint);
+  if (!zoomLens) {
+    // Crear el elemento de la lupa
+    zoomLens = document.createElement('div');
+    zoomLens.className = 'zoom-lens';
+    imageContainer.appendChild(zoomLens);
+  }
+
+  if (!zoomHint) {
+    // Crear hint de zoom con icono de lupa
+    zoomHint = document.createElement('div');
+    zoomHint.className = 'zoom-hint';
+    zoomHint.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
+    imageContainer.appendChild(zoomHint);
+  }
 
   // Zoom level
   const zoomLevel = 2.5;
+
+  // Variable para rastrear la última imagen cargada
+  let currentImageSrc = '';
+
+  function setupZoomBackground() {
+    // Solo actualizar si la imagen cambió o no se ha configurado
+    if (img.src && img.src !== currentImageSrc) {
+      currentImageSrc = img.src;
+      zoomLens.style.backgroundImage = `url('${img.src}')`;
+    }
+  }
 
   // Esperar a que la imagen cargue
   img.addEventListener('load', function() {
@@ -432,16 +451,17 @@ function initImageZoom() {
   });
 
   // Si la imagen ya está cargada
-  if (img.complete) {
+  if (img.complete && img.src) {
     setupZoomBackground();
-  }
-
-  function setupZoomBackground() {
-    zoomLens.style.backgroundImage = `url('${img.src}')`;
   }
 
   // Evento de movimiento del mouse
   imageContainer.addEventListener('mousemove', function(e) {
+    // Actualizar el fondo en cada movimiento para asegurar sincronización
+    if (img.src !== currentImageSrc) {
+      setupZoomBackground();
+    }
+
     const rect = imageContainer.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
@@ -467,9 +487,10 @@ function initImageZoom() {
     zoomLens.style.opacity = '0';
   });
 
-  // Mostrar lupa al entrar
+  // Mostrar lupa al entrar - actualizar el fondo y restaurar opacidad
   imageContainer.addEventListener('mouseenter', function() {
     setupZoomBackground();
+    zoomLens.style.opacity = '1';
   });
 }
 

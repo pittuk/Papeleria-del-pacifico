@@ -49,7 +49,6 @@
             <li><a href="index.html" class="nav__link nav__link--active">Inicio</a></li>
             <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
             <li><a href="productos.html" class="nav__link">Productos</a></li>
-            <li><a href="contacto.html" class="nav__link">Contacto</a></li>
           </ul>
         </nav>
 
@@ -76,6 +75,43 @@
       <li><a href="productos.html" class="mobile-menu__link">Productos</a></li>
       <li><a href="contacto.html" class="mobile-menu__link">Contacto</a></li>
     </ul>
+
+    <div class="mobile-menu__contact">
+      <div class="mobile-menu__contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </div>
+      <div class="mobile-menu__contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <a href="mailto:contacto@papeleraayd.cl">contacto@papeleraayd.cl</a>
+      </div>
+      <div class="mobile-menu__social">
+        <a href="#" class="mobile-menu__social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="#" class="mobile-menu__social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
 
   <!-- MAIN CONTENT -->
@@ -296,7 +332,6 @@
             </div>
 
             <div class="product-card-modern__content">
-              <p class="product-card-modern__category">Línea Económica</p>
               <h3 class="product-card-modern__title">Toalla 250 x 2</h3>
               <ul class="product-card-modern__specs">
                 <li>Pack x2 rollos • 250 metros</li>
@@ -320,7 +355,6 @@
             </div>
 
             <div class="product-card-modern__content">
-              <p class="product-card-modern__category">Línea Maxifort</p>
               <h3 class="product-card-modern__title">Higiénico 500 x 6</h3>
               <ul class="product-card-modern__specs">
                 <li>Pack x6 rollos • 500 metros</li>
@@ -344,7 +378,6 @@
             </div>
 
             <div class="product-card-modern__content">
-              <p class="product-card-modern__category">Línea Plus</p>
               <h3 class="product-card-modern__title">Toalla 190 x 2</h3>
               <ul class="product-card-modern__specs">
                 <li>Pack x2 rollos • 190 metros</li>
@@ -392,13 +425,11 @@
             </div>
           </div>
 
-          <!-- Columna derecha - Imágenes -->
-          <div class="cta__images">
-            <div class="cta__image cta__image--top">
-              <img src="assets/images/products/papeleria-del-pacifico-Papel-Toalla-L.jpeg" alt="Papelera del Pacífico - Calidad Superior">
-            </div>
-            <div class="cta__image cta__image--bottom">
-              <img src="assets/images/imagenes/papeleria-del-pacifico-8.jpg" alt="Papelera del Pacífico">
+          <!-- Columna derecha - Imagen -->
+          <div class="cta__images cta__images--single">
+            <div class="cta__image cta__image--full">
+              <img src="assets/images/imagenes/papelera-del-pacifico-papel-higienico5.webp" alt="Papelera del Pacífico - Papel Higiénico">
+              <img src="assets/images/logos/papeleria del pacifico favicon.png" alt="Logo Papelera del Pacífico" class="cta__image-logo">
             </div>
           </div>
         </div>

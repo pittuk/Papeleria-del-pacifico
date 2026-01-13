@@ -26,7 +26,7 @@ h6 {
   font-family: var(--font-family-headings);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--color-neutral-900);
+  color: var(--color-primary-navy);
   margin-bottom: var(--spacing-md);
 }
 
