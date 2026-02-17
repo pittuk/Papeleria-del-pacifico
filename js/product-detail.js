@@ -122,11 +122,11 @@ const products = {
     },
     category: 'toalla'
   },
-  // LÍNEA HOGAR DOBLE HOJA
-  'hogar-dh-80': {
+  // LÍNEA DOBLE HOJA
+  'doble-hoja-toalla-80': {
     name: 'Toalla Hogar Doble Hoja 80m',
-    line: 'Hogar Doble Hoja',
-    badgeClass: 'badge-hogar-dh',
+    line: 'Doble Hoja',
+    badgeClass: 'badge-doble-hoja',
     description: 'Toalla de papel doble hoja con diseño y tinta laminada. 80 metros de suavidad y absorción para el hogar.',
     image: 'assets/images/products/hogar doble hoja/toalla-Maxifort-doble-hoja-diseño-tinta-laminada-80-mts.webp',
     specs: {
@@ -137,10 +137,10 @@ const products = {
     },
     category: 'toalla-hogar'
   },
-  'hogar-dh-100': {
+  'doble-hoja-toalla-100': {
     name: 'Toalla Hogar Doble Hoja 100m',
-    line: 'Hogar Doble Hoja',
-    badgeClass: 'badge-hogar-dh',
+    line: 'Doble Hoja',
+    badgeClass: 'badge-doble-hoja',
     description: 'Toalla de papel doble hoja con diseño y tinta laminada. 100 metros de calidad premium para el hogar.',
     image: 'assets/images/products/hogar doble hoja/toalla Maxifort doble hoja diseño tinta laminada 100 mts.jpeg',
     specs: {
@@ -151,10 +151,10 @@ const products = {
     },
     category: 'toalla-hogar'
   },
-  'hogar-dh-150': {
+  'doble-hoja-toalla-150': {
     name: 'Toalla Hogar Colosal Doble Hoja 150m',
-    line: 'Hogar Doble Hoja',
-    badgeClass: 'badge-hogar-dh',
+    line: 'Doble Hoja',
+    badgeClass: 'badge-doble-hoja',
     description: 'Toalla de papel Colosal doble hoja con diseño y tinta laminada. 150 metros de máximo rendimiento para el hogar.',
     image: 'assets/images/products/hogar doble hoja/toalla-Maxifort-Colosal-doble-hoja-diseno-tinta-laminada-150mts.webp',
     specs: {
@@ -166,11 +166,11 @@ const products = {
     category: 'toalla-hogar'
   },
 
-  // LÍNEA HOGAR UNA HOJA
-  'hogar-sh-80': {
+  // LÍNEA UNA HOJA
+  'una-hoja-toalla-80': {
     name: 'Toalla Hogar Una Hoja 80m',
-    line: 'Hogar Una Hoja',
-    badgeClass: 'badge-hogar-sh',
+    line: 'Una Hoja',
+    badgeClass: 'badge-una-hoja',
     description: 'Toalla de papel una hoja de 80 metros, fabricada con 100% celulosa virgen. Suavidad y rendimiento para el hogar.',
     image: 'assets/images/products/hogar una hoja/toalla-hogar-una-hoja-80m.png',
     specs: {
@@ -181,10 +181,10 @@ const products = {
     },
     category: 'toalla-hogar'
   },
-  'hogar-sh-100': {
+  'una-hoja-toalla-100': {
     name: 'Toalla Hogar Una Hoja 100m',
-    line: 'Hogar Una Hoja',
-    badgeClass: 'badge-hogar-sh',
+    line: 'Una Hoja',
+    badgeClass: 'badge-una-hoja',
     description: 'Toalla de papel una hoja de 100 metros, fabricada con 100% celulosa virgen. Mayor rendimiento para el uso diario del hogar.',
     image: 'assets/images/products/hogar una hoja/toalla-hogar-una-hoja-100m.png',
     specs: {
@@ -195,10 +195,10 @@ const products = {
     },
     category: 'toalla-hogar'
   },
-  'hogar-sh-150': {
+  'una-hoja-toalla-150': {
     name: 'Toalla Hogar Una Hoja 150m',
-    line: 'Hogar Una Hoja',
-    badgeClass: 'badge-hogar-sh',
+    line: 'Una Hoja',
+    badgeClass: 'badge-una-hoja',
     description: 'Toalla de papel una hoja de 150 metros, fabricada con 100% celulosa virgen. Máximo rendimiento para el hogar.',
     image: 'assets/images/products/hogar una hoja/toalla-hogar-una-hoja-150m.png',
     specs: {

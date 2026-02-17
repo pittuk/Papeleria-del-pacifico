@@ -30,6 +30,8 @@ function initProductFilters() {
 
   /**
    * Aplicar filtros a los productos
+   * AND entre grupos: el producto debe coincidir con ambos filtros si ambos están activos
+   * OR dentro de cada grupo: basta con coincidir con uno de los seleccionados
    */
   function applyFilters() {
     // Obtener filtros activos
@@ -45,12 +47,12 @@ function initProductFilters() {
 
       let shouldShow = true;
 
-      // Filtrar por categoría
+      // Filtrar por categoría (si hay alguna seleccionada, debe coincidir)
       if (activeCategories.length > 0 && !activeCategories.includes(cardCategory)) {
         shouldShow = false;
       }
 
-      // Filtrar por tipo
+      // Filtrar por línea (si hay alguna seleccionada, debe coincidir)
       if (activeTypes.length > 0 && !activeTypes.includes(cardType)) {
         shouldShow = false;
       }

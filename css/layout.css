@@ -46,7 +46,8 @@
 }
 
 .header--scrolling-down .nav,
-.header--scrolling-down .header__cta {
+.header--scrolling-down .header__cta,
+.header--scrolling-down .header__social {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -162,10 +163,37 @@
   color: var(--color-primary-navy);
 }
 
+/* ========== HEADER SOCIAL ========== */
+.header__social {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-left: auto;
+}
+
+.header__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--color-neutral-600);
+  transition: color var(--transition-fast);
+}
+
+.header__social-link:hover {
+  color: var(--color-primary-navy);
+}
+
+.header__social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ========== HEADER CTA ========== */
 .header__cta {
   flex-shrink: 0;
-  margin-left: auto;
+  margin-left: var(--spacing-md);
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -635,8 +663,7 @@
   margin: 0;
 }
 
-.footer__schedule li,
-.footer__social-list li {
+.footer__schedule li {
   font-size: var(--font-size-body-small);
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: var(--spacing-sm);
@@ -652,16 +679,33 @@
   margin: 0 0 var(--spacing-xs) 0;
 }
 
+.footer__social-list {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
 .footer__social-link {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: all var(--transition-fast);
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer__social-link:hover {
   color: var(--color-white);
-  transform: translateX(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.footer__social-link svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* Footer Bottom */
@@ -916,7 +960,8 @@
   }
 
   .nav,
-  .header__cta {
+  .header__cta,
+  .header__social {
     display: none;
   }
 
