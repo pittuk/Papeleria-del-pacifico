@@ -958,7 +958,7 @@
 /* Responsive para Mobile */
 @media (max-width: 768px) {
   .hero-modern {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-xl) 0 var(--spacing-md);
     margin: 0 var(--spacing-md);
   }
 
@@ -973,6 +973,7 @@
   .hero-modern__actions {
     flex-direction: column;
     width: 100%;
+    margin-bottom: var(--spacing-lg);
   }
 
   .hero-modern__actions .btn {
@@ -1511,7 +1512,7 @@
 /* Responsive para Mobile */
 @media (max-width: 768px) {
   .testimonials-section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-md) 0 var(--spacing-2xl);
     margin: 0 var(--spacing-md);
   }
 
