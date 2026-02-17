@@ -166,6 +166,50 @@ const products = {
     category: 'toalla-hogar'
   },
 
+  // LÍNEA HOGAR UNA HOJA
+  'hogar-sh-80': {
+    name: 'Toalla Hogar Una Hoja 80m',
+    line: 'Hogar Una Hoja',
+    badgeClass: 'badge-hogar-sh',
+    description: 'Toalla de papel una hoja de 80 metros, fabricada con 100% celulosa virgen. Suavidad y rendimiento para el hogar.',
+    image: 'assets/images/products/hogar una hoja/toalla-hogar-una-hoja-80m.png',
+    specs: {
+      'Metraje': '80 metros',
+      'Tipo': 'Una hoja',
+      'Material': '100% celulosa virgen',
+      'Uso': 'Hogar'
+    },
+    category: 'toalla-hogar'
+  },
+  'hogar-sh-100': {
+    name: 'Toalla Hogar Una Hoja 100m',
+    line: 'Hogar Una Hoja',
+    badgeClass: 'badge-hogar-sh',
+    description: 'Toalla de papel una hoja de 100 metros, fabricada con 100% celulosa virgen. Mayor rendimiento para el uso diario del hogar.',
+    image: 'assets/images/products/hogar una hoja/toalla-hogar-una-hoja-100m.png',
+    specs: {
+      'Metraje': '100 metros',
+      'Tipo': 'Una hoja',
+      'Material': '100% celulosa virgen',
+      'Uso': 'Hogar'
+    },
+    category: 'toalla-hogar'
+  },
+  'hogar-sh-150': {
+    name: 'Toalla Hogar Una Hoja 150m',
+    line: 'Hogar Una Hoja',
+    badgeClass: 'badge-hogar-sh',
+    description: 'Toalla de papel una hoja de 150 metros, fabricada con 100% celulosa virgen. Máximo rendimiento para el hogar.',
+    image: 'assets/images/products/hogar una hoja/toalla-hogar-una-hoja-150m.png',
+    specs: {
+      'Metraje': '150 metros',
+      'Tipo': 'Una hoja',
+      'Material': '100% celulosa virgen',
+      'Uso': 'Hogar'
+    },
+    category: 'toalla-hogar'
+  },
+
   // LÍNEA PLUS
   'plus-hig-300': {
     name: 'Higiénico Plus 300 x 6',

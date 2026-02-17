@@ -980,30 +980,7 @@
   }
 
   .hero-modern__gallery {
-    flex-direction: column;
-    height: auto;
-    margin-top: -20px;
-    margin-bottom: -20px;
-  }
-
-  .hero-modern__gallery > div {
-    width: 100%;
-  }
-
-  .hero-modern__gallery-item {
-    position: static;
-    height: 150px;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .hero-modern__gallery-item--1,
-  .hero-modern__gallery-item--2,
-  .hero-modern__gallery-item--3,
-  .hero-modern__gallery-item--4,
-  .hero-modern__gallery-item--5,
-  .hero-modern__gallery-item--6,
-  .hero-modern__gallery-item--7 {
-    top: auto;
+    display: none;
   }
 
   .avatar {
@@ -1534,65 +1511,49 @@
 /* Responsive para Mobile */
 @media (max-width: 768px) {
   .testimonials-section {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     margin: 0 var(--spacing-md);
   }
 
   .testimonials-section .container {
-    min-height: 500px;
+    min-height: auto;
   }
 
-  /* Ocultar algunas imágenes en móvil para mejor legibilidad */
+  /* Ocultar todas las imagenes absolutas en mobile */
+  .testimonials-section__images {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  /* Ocultar la mayoria de imagenes, dejar solo 4 */
   .testimonials-section__image--3,
+  .testimonials-section__image--4,
+  .testimonials-section__image--5,
   .testimonials-section__image--6,
   .testimonials-section__image--7,
   .testimonials-section__image--9 {
     display: none;
   }
 
-  .testimonials-section__image--1 {
-    width: 80px;
-    height: 80px;
-    top: 20px;
-    left: 10px;
-  }
-
-  .testimonials-section__image--2 {
-    width: 100px;
-    height: 100px;
-    bottom: 20px;
-    top: auto;
-    left: 10px;
-  }
-
-  .testimonials-section__image--4 {
-    width: 90px;
-    height: 90px;
-    margin-left: -180px;
-  }
-
-  .testimonials-section__image--5 {
-    width: 80px;
-    height: 80px;
-    margin-left: 100px;
-  }
-
-  .testimonials-section__image--8 {
-    width: 90px;
-    height: 90px;
-    top: 40px;
-    right: 10px;
-  }
-
+  .testimonials-section__image--1,
+  .testimonials-section__image--2,
+  .testimonials-section__image--8,
   .testimonials-section__image--10 {
-    width: 100px;
-    height: 100px;
-    bottom: 40px;
-    right: 10px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
   }
 
   .testimonials-section__content {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: 0 var(--spacing-md);
   }
 
   .testimonials-section__label {
@@ -1656,6 +1617,22 @@
 .product-card-modern__badge--plus {
   background-color: #006B3F;
   color: #ffffff;
+}
+
+.product-card-modern__badge--hogar-sh {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+}
+
+/* Mostrar solo en mobile */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex;
+  }
 }
 
 /* Botón de favorito posicionado sobre la imagen */
@@ -1880,50 +1857,57 @@
 
 @media (max-width: 768px) {
   .product-card-modern {
-    padding: 16px;
-    border-radius: 24px;
+    padding: 8px;
+    border-radius: 16px;
   }
 
   .product-card-modern__badge {
-    font-size: 11px;
-    padding: 5px 12px;
-    top: 12px;
-    left: 12px;
+    font-size: 10px;
+    padding: 4px 8px;
+    top: 8px;
+    left: 8px;
   }
 
   .product-card-modern__favorite {
-    top: 12px;
-    right: 12px;
-    padding: 8px;
+    top: 8px;
+    right: 8px;
+    padding: 6px;
   }
 
   .product-card-modern__favorite svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 
   .product-card-modern__image {
-    border-radius: 18px;
+    border-radius: 12px;
+    margin-bottom: var(--spacing-sm);
   }
 
   .product-card-modern__image img {
-    border-radius: 18px;
+    border-radius: 12px;
   }
 
   .product-card-modern__category {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .product-card-modern__title {
-    font-size: 18px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+
+  .product-card-modern__specs {
+    margin-bottom: var(--spacing-sm);
   }
 
   .product-card-modern__specs li {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .product-card-modern__button {
-    padding: 14px 20px;
-    font-size: 13px;
+    padding: 10px 16px;
+    font-size: 12px;
   }
 }
